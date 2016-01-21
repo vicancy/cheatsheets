@@ -1,0 +1,69 @@
+/* 0. prepare */
+p
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* 1. external link with icon*/
+html[dir=ltr] .external-icon:not(.ignore-external):before,
+html[dir=rtl] .external-icon:not(.ignore-external):after
+{
+	content: '\f08e';
+	font-family: "FontAwesome";
+	font-size: .6em;
+	opacity: .5;
+	margin-right: .5em;
+	display: inline-block; /* If not specifed, by default it is inline, it is also underlined */
+}
+
+/* 2. notes*/
+.warning,
+.note,
+.error
+{
+    border-left-width: 5px;
+    border-left-style: solid;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding-left: 30px;
+}
+
+.warning:before,
+.note:before,
+.error:before
+{
+    display: inline-block;
+    width: 30px;
+    float: left;
+    margin: -5px 0 -5px -30px;
+    font-family: "FontAwesome";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+.warning {
+	background: #fff4cc;
+    border-color: #ffe070;
+}
+.note {
+	background: #fff4cc;
+    border-color: #ffe070;
+}
+.error {
+	background: #fad7d4;
+    border-color: #f08a81;
+}
+.warning:before{
+    content: '\f06a';
+}
+.note:before{
+    content: '\f016';
+}
+.error:before{
+    content: '\f016';
+}
